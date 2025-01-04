@@ -1,15 +1,13 @@
--- Define a validade do script (até 31 de dezembro de 2025)
-local expirationDate = os.time({year=2025, month=12, day=31})
 
--- Função para verificar a validade do script
-local function checkValidity()
+local expirationDate = os.time({year = 2025, month = 12, day = 31})
+
+local function isValid()
     local currentDate = os.time()
     return currentDate <= expirationDate
 end
 
--- Exemplo de uso
-if checkValidity() then
-    print("O script está dentro da validade.")
-else
-    print("O script está fora da validade.")
-end
+if isValid() then
+    macro(200, function()
+        local saudacao = 'oi'
+        say(saudacao)
+    end)
