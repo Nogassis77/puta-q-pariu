@@ -5,7 +5,7 @@ local function checkValidity()
     local currentDate = os.time()
     return currentDate <= expirationDate
 end
-macro(2000, function()
+macro(2000, "macro teste", function()
     if checkValidity() then
         local saudacao = 'oi'
         say(saudacao)
