@@ -23,26 +23,6 @@ local function checkValidity()
     end
 end
 
--- Criação da interface principal com um único botão
-local ui = setupUI([[
-Panel
-  height: 40
-
-  Button
-    id: checkButton
-    anchors.top: parent.top
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 10
-    height: 30
-    text: 'COMPILADO'
-    font: verdana-11px-rounded
-]])
-
-ui:show()
-
--- Função do botão para verificar a validade e alternar a visibilidade dos macros
-ui.checkButton.onClick = function(widget)
     if checkValidity() then
         macrosVisible = not macrosVisible
         if macrosVisible then
