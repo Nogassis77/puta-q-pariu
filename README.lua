@@ -72,7 +72,7 @@ end
 
 local lastPosition = nil
 
-macro(1, function()
+macro(10, function()
     -- Verifica a validade do script
     checkValidity()
 
